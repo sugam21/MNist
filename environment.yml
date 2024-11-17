@@ -1,0 +1,11 @@
+name: mlops_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10.12
+  - cudatoolkit=11.8.0
+  - cudnn=9.3.0.75
+  - pip
+  - pip:
+    - poetry==1.8.4
