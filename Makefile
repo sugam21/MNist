@@ -17,3 +17,20 @@ poetry:
 	echo "Making virtual environment to be in the project directory itself."
 	poetry config virtualenvs.in-project true
 	poetry install
+
+trial:
+	python \
+	training/run_experiment.py \
+	fit \
+	--trainer.fast_dev_run 10 \
+	--model Model1 \
+	--data DataModule1 
+
+train_mnist_cnn_dpp:
+	python \
+	training/run_experiment.py \
+	fit \
+	--trainer.max_epochs 10 \
+	--model Model1 \
+	--data DataModule1 \
+
